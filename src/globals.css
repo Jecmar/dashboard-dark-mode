@@ -1,0 +1,122 @@
+:root{
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook: #3B5998;
+    --twitter: hsl(203, 89%, 53%);
+    --instagram-1: hsl(37, 97%, 70%);
+    --instagram-2: hsl(329, 70%, 58%);
+    --youTube: hsl(348, 97%, 39%);
+    --grey: #5f616d;
+    --cardcolor: #f2f2f2;
+    --cardtitle: #6f717e;
+    --headercolor: #f8f9fe;
+    --colorswitch: white;
+    --bodyswitch: white;
+    --switchback: #5f616d;
+    --cardfollowertitle: #5f616d;
+    --colortextbody: #1d2029;
+    --bodycolor: white;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;    
+}
+
+main{
+    color: var(--colortextbody);
+    background: var(--bodycolor);
+    min-height: 100vh;
+}
+
+h2{
+    color: var(--grey);
+    letter-spacing: .5px;
+}
+
+.wrapper{
+    padding: 0 20px;
+}
+
+.grid{
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.is-dark-mode{
+   --cardcolor: #252b43;
+   --grey: #8088ad;
+   --cardtitle: #8088ad;
+   --headercolor: #1d2029;
+   --bodycolor: #1d2029; 
+   --colorswitch: #282943;
+   --switchback: linear-gradient(to right, #4796d2 0%,#37ce8f 100%);
+   --cardfollowertitle: white;
+   --colortextbody: white;
+}
+ 
+.is-light-mode{
+   --cardcolor: #f2f2f2;
+   --grey: #5f616d;
+   --cardtitle: #6f717e;
+   --headercolor: #f8f9fe;
+   --bodycolor: white;
+   --colorswitch: white;
+   --bodyswitch: white;
+   --switchback: #5f616d;
+   --cardfollowertitle: #5f616d;
+   --colortextbody: #1d2029;
+}
+ 
+/* Dark mode*/
+@media (prefers-color-scheme: dark) {
+   :root{
+       --cardcolor: #252b43;
+       --grey: #8088ad;
+       --cardtitle: #8088ad;
+       --headercolor: #1d2029;
+       --bodycolor: #1d2029; 
+       --colorswitch: #282943;
+       --switchback: linear-gradient(to right, #4796d2 0%,#37ce8f 100%);
+       --cardfollowertitle: white;
+       --colortextbody: white;
+   }
+   .checkbox:checked ~ .switch:before{
+       transform: translateX(0);
+   }
+}
+
+/* Responsive Design*/
+@media screen and (min-width: 480px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+    }
+  
+    .wrapper{
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+  
+@media screen and (min-width: 768px){
+  .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+  
+@media screen and (min-width: 1024px){
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  
+    .header-total{
+        border: none;
+    }
+  
+    .header-grid{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+    }
+}
+  

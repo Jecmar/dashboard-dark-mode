@@ -1,0 +1,74 @@
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--cardcolor);
+    text-align: center;
+    padding: 1em 0;
+    position: relative;    
+  }
+  
+  .card:before{
+    content:"";
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  .card.facebook:before{
+    background: var(--facebook);
+  }
+  
+  .card.twitter:before{
+    background: var(--twitter);
+  }
+  
+  .card.instagram:before{
+    background-image: linear-gradient(to right, var(--instagram-1), var(--instagram-2));
+  }
+  
+  .card.youtube:before{
+    background: var(--youTube);
+  }
+  
+  .card-title{
+    display: flex;
+    align-items: center;     
+    justify-content: center;
+    color:var(--cardtitle);
+    font-size: .8em;
+    font-weight: bold;
+  }
+  
+  .card-title img{
+    margin-right: 4px;
+  }
+  
+  .card-followers-number{
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  .card-followers-title{
+    display: block;
+    text-transform: uppercase;
+    color: var(--cardfollowertitle);
+    letter-spacing: 6px;
+    font-size: .8em;
+  }
+  
+  .card-today{
+    margin-top: 20px;
+    color:var(--lime-green);
+    font-size: .8em;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-today img{
+    margin-right: 3px;
+  }
